@@ -1,0 +1,22 @@
+{
+    "mcpServers": {
+        "applescript": {
+            "command": "/path/to/mcp-experiments/.venv/bin/python",
+            "args": [
+                "/path/to/mcp-experiments/applescript.py"
+            ],
+            "env": {
+                "MCP_EXECUTION_MODE": "restricted"
+            }
+        },
+        "bash": {
+            "command": "/path/to/mcp-experiments/.venv/bin/python",
+            "args": [
+                "/path/to/mcp-experiments/bash.py"
+            ],
+            "env": {
+                "MCP_EXECUTION_MODE": "restricted"
+            }
+        }
+    }
+}
