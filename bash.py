@@ -51,7 +51,7 @@ async def whoami() -> str:
     return await execute_bash(script)
 
 # If arbitrary execution mode is enabled, we can expose the execute_bash tool.
-if os.getenv('MCP_EXECUTION_MODE').lower() == 'arbitrary':
+if os.getenv("MCP_EXECUTION_MODE", "restricted").lower() == "arbitrary":
     print("Warning: Arbitrary execution mode is enabled. Be careful with this option and only run it in a safe / sandboxed environment.")
     mcp.add_tool(execute_bash)
 
